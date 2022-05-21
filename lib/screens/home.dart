@@ -24,6 +24,7 @@ class Home extends StatelessWidget {
           title: const Text('Home Page'),
           backgroundColor: Colors.yellow[900],
         ),
+        backgroundColor: Colors.white,
         bottomNavigationBar: const BottomNavigation(),
         drawer: AppDrawer(),
         body: Padding(

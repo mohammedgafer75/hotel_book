@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:hotel_book/screens/Bills_page.dart';
+import 'package:hotel_book/screens/change_password.dart';
 import 'package:hotel_book/screens/my_resrvation.dart';
 import 'package:hotel_book/screens/my_services.dart';
 
@@ -12,6 +13,7 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     AuthController controller = Get.find();
     return Drawer(
+      backgroundColor: Colors.white,
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
@@ -40,11 +42,11 @@ class AppDrawer extends StatelessWidget {
           const Divider(),
           _createDrawerItem(
               icon: Icons.help,
-              text: 'About Application',
+              text: 'Change Password',
               onTap: () {
-                // Get.to(()=> Home());
+                Get.to(() => const ChangePassword());
               }),
-          _createDrawerItem(icon: Icons.help, text: 'Who are we', onTap: () {}),
+          // _createDrawerItem(icon: Icons.help, text: 'Who are we', onTap: () {}),
           const Divider(),
           _createDrawerItem(
               icon: Icons.logout,
