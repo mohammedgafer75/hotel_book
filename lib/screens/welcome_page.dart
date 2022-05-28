@@ -47,10 +47,10 @@ class WelcomePage extends StatelessWidget {
                     ))),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignIn()));
+                      MaterialPageRoute(builder: (context) => SignUp()));
                 },
                 child: const Text(
-                  'sign in ',
+                  'sign up',
                   style: TextStyle(fontSize: 14.0, color: Colors.white),
                 ),
               ),
@@ -68,10 +68,10 @@ class WelcomePage extends StatelessWidget {
                     ))),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SignUp()));
+                      MaterialPageRoute(builder: (context) => SignIn()));
                 },
                 child: const Text(
-                  'sign up',
+                  'sign in ',
                   style: TextStyle(fontSize: 14.0, color: Colors.white),
                 ),
               ),

@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MyBills {
   String? id;
+  String? name;
   String? uid;
   int? roomNo;
   int? days;
@@ -18,6 +19,7 @@ class MyBills {
       {this.id,
       required this.uid,
       required this.roomNo,
+      required this.name,
       required this.days,
       required this.resrvationPrice,
       required this.servicesCount,
@@ -30,6 +32,7 @@ class MyBills {
   MyBills.fromMap(DocumentSnapshot data) {
     id = data.id;
     uid = data["uid"];
+    name = data["name"];
     days = data["days"];
     resrvationPrice = data["resrvationPrice"];
     servicesCount = data["servicesCount"];

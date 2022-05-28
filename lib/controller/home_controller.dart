@@ -41,13 +41,14 @@ class HomeController extends GetxController {
   }
 
   Stream<List<Rooms>> getAllRooms() => collectionReference
+      .where('check', isEqualTo: false)
       .snapshots()
       .map((query) => query.docs.map((item) => Rooms.fromMap(item)).toList());
   Stream<List<Service>> getAllService() => collectionReference2
       .snapshots()
       .map((query) => query.docs.map((item) => Service.fromMap(item)).toList());
 
-  makeResrviation(String type, int number, int price) {
+  makeResrviation(String type, int number, int price, String id) {
     showdilog();
     DateTime last = time.add(Duration(days: int.tryParse(day.text)!));
     var re = <String, dynamic>{
@@ -67,6 +68,7 @@ class HomeController extends GetxController {
         .set(re)
         .whenComplete(() async {
       await firebaseFirestore.collection('mybills').doc().set({
+        "name": name.text,
         "uid": user!.uid,
         "roomNo": number,
         "time": time,
@@ -77,6 +79,7 @@ class HomeController extends GetxController {
         "days": int.tryParse(day.text),
         "servicesCount": 0,
       });
+      collectionReference.doc(id).update({'check': true});
       Get.back();
       showbar("Resrvation Added", "Resrvation Added", "Resrvation added", true);
       name.clear();

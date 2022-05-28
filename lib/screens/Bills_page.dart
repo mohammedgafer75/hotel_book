@@ -36,6 +36,17 @@ class MyBills extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
+                                "Resrvation by: ${logic.myBills[index].name}",
+                                style: const TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
                                 "Room No: ${logic.myBills[index].roomNo}",
                                 style: const TextStyle(
                                   color: Colors.black,

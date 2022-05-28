@@ -228,7 +228,7 @@ class Details extends StatelessWidget {
                       lable: 'Reservation',
                       ontap: () {
                         controller.makeResrviation(
-                            data1.type, data1.number, data1.price);
+                            data1.type, data1.number, data1.price,data1.id);
                       },
                       color: Colors.yellow[900]!,
                     )

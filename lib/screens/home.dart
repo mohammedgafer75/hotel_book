@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
               Container(
                 alignment: Alignment.center,
                 // margin: const EdgeInsets.only(top: 20),
-                height: 460,
+                height: height * .78,
                 child: getFeature(context),
               )
             ],
