@@ -46,8 +46,6 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Get.to(() => const ChangePassword());
               }),
-          _createDrawerItem(
-              icon: Icons.help, text: 'About Application', onTap: () {}),
           const Divider(),
           _createDrawerItem(
               icon: Icons.logout,
