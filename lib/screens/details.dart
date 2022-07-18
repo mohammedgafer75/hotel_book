@@ -227,8 +227,11 @@ class Details extends StatelessWidget {
                     CustomTextButton(
                       lable: 'Reservation',
                       ontap: () {
+                        print(data1.type);
+                        print(data1.number);
+                        print(data1.price);
                         controller.makeResrviation(
-                            data1.type, data1.number, data1.price,data1.id);
+                            data1.type, data1.number, data1.price, data1.id);
                       },
                       color: Colors.yellow[900]!,
                     )

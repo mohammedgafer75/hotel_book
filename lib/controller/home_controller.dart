@@ -51,8 +51,9 @@ class HomeController extends GetxController {
   makeResrviation(String type, int number, int price, String id) {
     showdilog();
     DateTime last = time.add(Duration(days: int.tryParse(day.text)!));
+   String uid = user!.uid;
     var re = <String, dynamic>{
-      "uid": user!.uid,
+      "uid": uid,
       "name": name.text,
       "type": type,
       "number": number,
